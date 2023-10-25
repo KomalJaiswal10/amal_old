@@ -1,4 +1,5 @@
 import 'package:amal/constant/colors.dart';
+import 'package:amal/constant/dimensions.dart';
 import 'package:flutter/material.dart';
 
 class ATextTheme {
@@ -6,6 +7,6 @@ class ATextTheme {
 
   static TextTheme lightTextTheme = TextTheme(
     headlineLarge: const TextStyle().copyWith(
-        fontSize: 32, fontWeight: FontWeight.bold, color: AAppColors.white),
+        fontSize: ADimensions.size32, fontWeight: FontWeight.bold, color: AAppColors.white),
   );
 }

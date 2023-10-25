@@ -1,6 +1,5 @@
 import 'package:amal/theme/theme.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 void main() {
   runApp(const MyApp());
@@ -31,7 +30,10 @@ class MyHomePage extends StatelessWidget {
     return Scaffold(
       body: Center(
           child: Container(
-        child: const Text('Test'),
+        child: Text(
+          'Test',
+          style: Theme.of(context).textTheme.headlineLarge,
+        ),
       )),
     );
   }
