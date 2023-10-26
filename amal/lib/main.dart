@@ -1,4 +1,7 @@
-import 'package:amal/theme/theme.dart';
+import 'package:amal/service/constant/colors.dart';
+import 'package:amal/service/theme/theme.dart';
+import 'package:amal/view/src/authentication/login.dart';
+import 'package:amal/view/widgets/extensions.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -17,7 +20,7 @@ class MyApp extends StatelessWidget {
       themeMode: ThemeMode.system,
       theme: AAppTheme.ligthTheme,
       darkTheme: AAppTheme.darkTheme,
-      home: const MyHomePage(),
+      home: const LoginPage(),
     );
   }
 }
@@ -29,12 +32,14 @@ class MyHomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-          child: Container(
         child: Text(
-          'Test',
-          style: Theme.of(context).textTheme.headlineLarge,
+          DateTime.now().dateWithMonth(),
+          style: Theme.of(context)
+              .textTheme
+              .headlineLarge!
+              .copyWith(color: AAppColors.amalGreen),
         ),
-      )),
+      ),
     );
   }
 }
