@@ -1,6 +1,6 @@
 import 'package:amal/service/constant/colors.dart';
 import 'package:amal/service/theme/theme.dart';
-import 'package:amal/view/src/authentication/login.dart';
+import 'package:amal/view/src/onboarding/splash.dart';
 import 'package:amal/view/widgets/extensions.dart';
 import 'package:flutter/material.dart';
 
@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
       themeMode: ThemeMode.system,
       theme: AAppTheme.ligthTheme,
       darkTheme: AAppTheme.darkTheme,
-      home: const LoginPage(),
+      home: const SplashScreen(),
     );
   }
 }
