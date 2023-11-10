@@ -39,7 +39,7 @@ class _SplashScreenState extends State<SplashScreen> {
             child: AnimatedAlign(
               alignment: expanded ? Alignment.topRight : Alignment.center,
               duration: const Duration(seconds: 1),
-              curve: Curves.fastOutSlowIn,
+              curve: Curves.easeInOut,
               child: Image.asset('assets/app_logo/aman_lotus.png',
                   width: !expanded ? _bigFontSize : 60),
             ),
