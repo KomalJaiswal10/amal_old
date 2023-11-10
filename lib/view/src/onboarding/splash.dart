@@ -21,22 +21,9 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     Future.delayed(const Duration(seconds: 2))
         .then((value) => setState(() => expanded = true))
-        .then((value) {
-      print('here');
-      const Duration(minutes: 5);
-      setState(() {
-        yes = true;
-      });
+        .then((value) => Future.delayed(const Duration(milliseconds: 2014))
+            .then((value) => Get.to(() => const LoginPage())));
 
-      print('here2');
-    }).then((value) {
-      print('nav');
-      if (yes == true) {
-        // Get.to(() => const LoginPage());
-      }
-    });
-    // const Duration(minutes: 2)).whenComplete(() => Get.to(() => const LoginPage()));
-    // .then((value) => Get.to(() => const LoginPage()));
     super.initState();
   }
 
@@ -77,36 +64,3 @@ class _SplashScreenState extends State<SplashScreen> {
     );
   }
 }
-
-// class SplashScreen extends StatelessWidget {
-//   const SplashScreen({super.key});
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return Scaffold(
-//       body: Center(
-//         child: Stack(alignment: Alignment.center, children: [
-//           Positioned(
-//               right: 10,
-//               top: 20,
-//               child: Image.asset('assets/app_logo/aman_lotus.png', width: 60)),
-          // AnimatedTextKit(
-          //   totalRepeatCount: 1,
-          //   // pause: const Duration(seconds: 180),
-          //   animatedTexts: [
-          //     FadeAnimatedText('Amal',
-          //         // fadeInEnd: 0.2,
-          //         // fadeOutBegin: 2,
-          //         textAlign: TextAlign.center,
-          //         textStyle: TextStyle(
-          //             fontFamily: GoogleFonts.mrsSaintDelafield().fontFamily,
-          //             fontSize: 120,
-          //             color: AAppColors.amalGreen)),
-          //   ],
-          //   // onTap: onTap,
-          // ),
-//         ]),
-//       ),
-//     );
-//   }
-// }
