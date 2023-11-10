@@ -1,6 +1,6 @@
 import 'package:amal/service/constant/colors.dart';
 import 'package:amal/service/theme/theme.dart';
-import 'package:amal/view/src/onboarding/splash.dart';
+import 'package:amal/view/src/intro/splash.dart';
 import 'package:amal/view/widgets/extensions.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
