@@ -16,7 +16,7 @@ class AAppTheme {
   static ThemeData darkTheme = ThemeData(
     useMaterial3: true,
     fontFamily: GoogleFonts.lato().fontFamily,
-    scaffoldBackgroundColor: AAppColors.amalBlack,
+    scaffoldBackgroundColor: AAppColors.amalPrimaryBlack,
     brightness: Brightness.dark,
     textTheme: ATextTheme.darkTextTheme,
   );
