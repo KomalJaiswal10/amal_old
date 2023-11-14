@@ -11,4 +11,7 @@ class AAppColors {
   // Text Colors
   static const Color white = Colors.white;
   static const Color black = Colors.black;
+
+  // Background Colors
+  static const whiteBg = Color(0xffE3EBF3);
 }

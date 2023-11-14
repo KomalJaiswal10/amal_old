@@ -1,3 +1,4 @@
+import 'package:amal/view/widgets/textformfields.dart';
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatelessWidget {
@@ -9,7 +10,14 @@ class LoginPage extends StatelessWidget {
         child: Scaffold(
       body: SingleChildScrollView(
         child: Column(
-          children: [],
+          children: [
+            Padding(
+              padding: EdgeInsets.all(18.0),
+              child: CustomTextField(
+                hint: 'Email',
+              ),
+            )
+          ],
         ),
       ),
     ));

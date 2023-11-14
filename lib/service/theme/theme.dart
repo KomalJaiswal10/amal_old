@@ -6,6 +6,8 @@ import 'package:google_fonts/google_fonts.dart';
 class AAppTheme {
   AAppTheme._();
 
+  static late bool isDark;
+
   static ThemeData ligthTheme = ThemeData(
       useMaterial3: true,
       fontFamily: GoogleFonts.lato().fontFamily,

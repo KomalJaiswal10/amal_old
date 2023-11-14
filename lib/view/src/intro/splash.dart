@@ -13,14 +13,14 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
-  var expanded = false;
+  bool isAnimated = false;
   final double _bigFontSize = 200;
-  bool yes = false;
+
 
   @override
   void initState() {
     Future.delayed(const Duration(seconds: 2))
-        .then((value) => setState(() => expanded = true))
+        .then((value) => setState(() => isAnimated = true))
         .then((value) => Future.delayed(const Duration(milliseconds: 2014))
             .then((value) => Get.offAll(() => const LoginPage())));
 
@@ -37,15 +37,15 @@ class _SplashScreenState extends State<SplashScreen> {
             height: 145,
             width: 190,
             child: AnimatedAlign(
-              alignment: expanded ? Alignment.topRight : Alignment.center,
+              alignment: isAnimated ? Alignment.topRight : Alignment.center,
               duration: const Duration(seconds: 1),
               curve: Curves.easeInOut,
               child: Image.asset('assets/app_logo/aman_lotus.png',
-                  width: !expanded ? _bigFontSize : 60),
+                  width: !isAnimated ? _bigFontSize : 60),
             ),
           ),
           Visibility(
-            visible: expanded,
+            visible: isAnimated,
             child: AnimatedTextKit(
               totalRepeatCount: 1,
               animatedTexts: [

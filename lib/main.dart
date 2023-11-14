@@ -1,6 +1,6 @@
 import 'package:amal/service/constant/colors.dart';
 import 'package:amal/service/theme/theme.dart';
-import 'package:amal/view/src/intro/splash.dart';
+import 'package:amal/view/src/authentication/login.dart';
 import 'package:amal/view/widgets/extensions.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -11,24 +11,22 @@ void main() {
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
-
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    AAppTheme.isDark = Theme.of(context).brightness == Brightness.dark;
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Amal',
-      themeMode: ThemeMode.system,
+      themeMode: ThemeMode.light,
       theme: AAppTheme.ligthTheme,
       darkTheme: AAppTheme.darkTheme,
-      home: const SplashScreen(),
+      home: const LoginPage(),
     );
   }
 }
 
 class MyHomePage extends StatelessWidget {
   const MyHomePage({super.key});
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(

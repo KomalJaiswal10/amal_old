@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
 extension ExtSizedBox on SizedBox {
-  SizedBox sizedWidth({double width = 10.0}) => SizedBox(
+  SizedBox sizedWidth({double 
+  width = 10.0}) => SizedBox(
         width: width,
       );
   SizedBox sizedHeight({double height = 10.0}) => SizedBox(
