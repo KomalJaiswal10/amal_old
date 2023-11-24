@@ -14,15 +14,15 @@ class SplashScreen extends StatefulWidget {
 
 class _SplashScreenState extends State<SplashScreen> {
   bool isAnimated = false;
-  final double _bigFontSize = 200;
-
+  final double _bigFontSize = 700;
 
   @override
   void initState() {
     Future.delayed(const Duration(seconds: 2))
         .then((value) => setState(() => isAnimated = true))
-        .then((value) => Future.delayed(const Duration(milliseconds: 2014))
-            .then((value) => Get.offAll(() => const LoginPage())));
+        .then((value) => Future.delayed(const Duration(milliseconds: 1988))
+            // .then((value) => Get.offAll(() => const LoginPage()))
+            );
 
     super.initState();
   }
@@ -39,9 +39,9 @@ class _SplashScreenState extends State<SplashScreen> {
             child: AnimatedAlign(
               alignment: isAnimated ? Alignment.topRight : Alignment.center,
               duration: const Duration(seconds: 1),
-              curve: Curves.easeInOut,
-              child: Image.asset('assets/app_logo/aman_lotus.png',
-                  width: !isAnimated ? _bigFontSize : 60),
+              curve: Curves.ease,
+              child: Image.asset('assets/amal_lotus.png',
+                  width: !isAnimated ? _bigFontSize : 80),
             ),
           ),
           Visibility(
