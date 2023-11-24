@@ -9,16 +9,16 @@ class AAppTheme {
   static late bool isDark;
 
   static ThemeData ligthTheme = ThemeData(
-      useMaterial3: true,
+      useMaterial3: false,
       fontFamily: GoogleFonts.lato().fontFamily,
       scaffoldBackgroundColor: AAppColors.white,
       brightness: Brightness.light,
       textTheme: ATextTheme.lightTextTheme);
 
   static ThemeData darkTheme = ThemeData(
-    useMaterial3: true,
+    useMaterial3: false,
     fontFamily: GoogleFonts.lato().fontFamily,
-    scaffoldBackgroundColor: AAppColors.amalPrimaryBlack,
+    // scaffoldBackgroundColor: AAppColors.amalPrimaryBlack,
     brightness: Brightness.dark,
     textTheme: ATextTheme.darkTextTheme,
   );

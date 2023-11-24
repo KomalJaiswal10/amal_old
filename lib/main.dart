@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Amal',
-      themeMode: ThemeMode.light,
+      themeMode: ThemeMode.system,
       theme: AAppTheme.ligthTheme,
       darkTheme: AAppTheme.darkTheme,
       home: const LoginPage(),
