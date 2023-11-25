@@ -5,8 +5,8 @@ class AAppColors {
 
   // App Colors
   static const Color amalGreen = Color(0xffC9F66F);
-  // static Color amalPrimaryBlack = const Color(0xff151515);
-  static Color amalPrimaryBlack = const Color(0xff161724);
+  static Color amalPrimaryBlack = const Color(0xff151515);
+  // static Color amalPrimaryBlack = const Color(0xff161724);
   static Color amalSecondaryBlack = const Color(0xff252525);
 
   // Text Colors
