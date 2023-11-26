@@ -1,14 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
-extension ExtSizedBox on SizedBox {
-  SizedBox sizedWidth({double 
-  width = 10.0}) => SizedBox(
-        width: width,
-      );
-  SizedBox sizedHeight({double height = 10.0}) => SizedBox(
-        height: height,
-      );
+extension ExtSizedBox on num {
+  SizedBox get width => SizedBox(width: toDouble());
+  SizedBox get heigth => SizedBox(height: toDouble());
 }
 
 extension ExtDateTime on DateTime {
