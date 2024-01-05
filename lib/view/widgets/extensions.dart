@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
+extension ExThemeData on BuildContext {
+  ThemeData get theme => Theme.of(this);
+  TextTheme get textTheme => theme.textTheme;
+}
+
 extension ExtSizedBox on num {
   SizedBox get width => SizedBox(width: toDouble());
   SizedBox get heigth => SizedBox(height: toDouble());

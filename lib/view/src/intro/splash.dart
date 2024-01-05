@@ -21,8 +21,7 @@ class _SplashScreenState extends State<SplashScreen> {
     Future.delayed(const Duration(seconds: 2))
         .then((value) => setState(() => isAnimated = true))
         .then((value) => Future.delayed(const Duration(milliseconds: 1988))
-            // .then((value) => Get.offAll(() => const LoginPage()))
-            );
+            .then((value) => Get.offAll(() => const LoginPage())));
 
     super.initState();
   }
@@ -41,7 +40,7 @@ class _SplashScreenState extends State<SplashScreen> {
               duration: const Duration(seconds: 1),
               curve: Curves.ease,
               child: Image.asset('assets/amal_lotus.png',
-                  width: !isAnimated ? _bigFontSize : 80),
+                  width: !isAnimated ? _bigFontSize : 60),
             ),
           ),
           Visibility(
@@ -55,7 +54,7 @@ class _SplashScreenState extends State<SplashScreen> {
                     textStyle: TextStyle(
                         fontFamily: GoogleFonts.mrsSaintDelafield().fontFamily,
                         fontSize: 120,
-                        color: AAppColors.amalGreen)),
+                        color: AppColors.primaryBlue)),
               ],
             ),
           ),

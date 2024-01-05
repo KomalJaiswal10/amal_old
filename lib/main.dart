@@ -1,6 +1,6 @@
 import 'package:amal/service/constant/colors.dart';
 import 'package:amal/service/theme/theme.dart';
-import 'package:amal/view/src/authentication/login.dart';
+import 'package:amal/view/src/intro/splash.dart';
 import 'package:amal/view/widgets/extensions.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -13,14 +13,14 @@ class MyApp extends StatelessWidget {
   const MyApp({super.key});
   @override
   Widget build(BuildContext context) {
-    AAppTheme.isDark = Theme.of(context).brightness == Brightness.dark;
+    AppTheme.isDark = Theme.of(context).brightness == Brightness.dark;
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Amal',
-      themeMode: ThemeMode.light,
-      theme: AAppTheme.ligthTheme,
-      darkTheme: AAppTheme.darkTheme,
-      home: const LoginPage(),
+      themeMode: ThemeMode.dark,
+      theme: AppTheme.ligthTheme,
+      darkTheme: AppTheme.darkTheme,
+      home: const SplashScreen(),
     );
   }
 }
@@ -36,7 +36,7 @@ class MyHomePage extends StatelessWidget {
           style: Theme.of(context)
               .textTheme
               .headlineLarge!
-              .copyWith(color: AAppColors.amalGreen),
+              .copyWith(color: AppColors.primaryBlue),
         ),
       ),
     );
