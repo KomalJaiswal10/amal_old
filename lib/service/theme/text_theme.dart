@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 class AppTextTheme {
   AppTextTheme._();
 
-  static TextTheme lightTextTheme = TextTheme().copyWith();
+  static TextTheme lightTextTheme = const TextTheme().copyWith();
 
   static TextTheme darkTextTheme = TextTheme(
     headlineLarge: const TextStyle().copyWith(color: AppColors.white),

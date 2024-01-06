@@ -4,13 +4,13 @@ class ColorThemeExtension extends ThemeExtension<ColorThemeExtension> {
   final Color? background;
   final Color? buttonText;
   final Color? textFieldBg;
-  final Color? primaryIcon;
+  final Color? textColor;
 
   ColorThemeExtension({
     required this.background,
     required this.buttonText,
     required this.textFieldBg,
-    required this.primaryIcon,
+    required this.textColor,
   });
 
   @override
@@ -19,7 +19,7 @@ class ColorThemeExtension extends ThemeExtension<ColorThemeExtension> {
         background: background,
         buttonText: buttonText,
         textFieldBg: textFieldBg,
-        primaryIcon: primaryIcon);
+        textColor: textColor);
   }
 
   @override
@@ -29,6 +29,6 @@ class ColorThemeExtension extends ThemeExtension<ColorThemeExtension> {
         background: background,
         buttonText: buttonText,
         textFieldBg: textFieldBg,
-        primaryIcon: primaryIcon);
+        textColor: textColor);
   }
 }
