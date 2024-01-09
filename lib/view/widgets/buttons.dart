@@ -1,6 +1,11 @@
+import 'package:amal/service/constant/app_finals.dart';
 import 'package:amal/service/constant/colors.dart';
 import 'package:amal/service/constant/dimensions.dart';
+import 'package:amal/view/widgets/texts.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+
+import '../../service/cubit/theme_cubit.dart';
 
 class CustomButton extends StatelessWidget {
   const CustomButton(
@@ -14,16 +19,17 @@ class CustomButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final state = context.watch<ThemeCubit>().state;
     bool isPressed = false;
-    return StatefulBuilder(builder: (context, state) {
+    return StatefulBuilder(builder: (context, internalState) {
       return GestureDetector(
           onTapUp: (value) {
             isPressed = false;
-            state(() {});
+            internalState(() {});
           },
           onTapDown: (value) {
             isPressed = true;
-            state(() {});
+            internalState(() {});
           },
           onTap: onTap,
           child: Container(
@@ -34,19 +40,13 @@ class CustomButton extends StatelessWidget {
                 borderRadius: const BorderRadius.all(Radius.circular(8)),
                 boxShadow: isPressed
                     ? [
-                        const BoxShadow(
+                        BoxShadow(
                             blurRadius: 5.0,
-                            offset: Offset(1, 5),
-                            color: Colors.grey)
+                            offset: const Offset(1, 5),
+                            color: state.colorTheme.buttonShadow)
                       ]
                     : []),
-            child: Center(
-              child: Text(
-                text,
-                style: Theme.of(context).textTheme.titleMedium!.copyWith(
-                    fontWeight: FontWeight.bold, color: AppColors.whiteBg),
-              ),
-            ),
+            child: Center(child: CustomText('SIGN IN').buttonText()),
           ));
     });
   }

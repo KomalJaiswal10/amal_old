@@ -1,34 +1,27 @@
+import 'package:amal/service/constant/colors.dart';
 import 'package:flutter/material.dart';
 
-class ColorThemeExtension extends ThemeExtension<ColorThemeExtension> {
-  final Color? background;
-  final Color? buttonText;
-  final Color? textFieldBg;
-  final Color? textColor;
+class ColorTheme {
+  final Color textFieldBg;
+  final Color buttonShadow;
+  final Color text;
 
-  ColorThemeExtension({
-    required this.background,
-    required this.buttonText,
-    required this.textFieldBg,
-    required this.textColor,
-  });
+  ColorTheme(
+      {required this.textFieldBg,
+      required this.buttonShadow,
+      required this.text});
 
-  @override
-  ThemeExtension<ColorThemeExtension> copyWith() {
-    return ColorThemeExtension(
-        background: background,
-        buttonText: buttonText,
-        textFieldBg: textFieldBg,
-        textColor: textColor);
+  static ColorTheme lightThemeColor() {
+    return ColorTheme(
+        textFieldBg: AppColors.whiteBg,
+        buttonShadow: AppColors.grey,
+        text: AppColors.black);
   }
 
-  @override
-  ThemeExtension<ColorThemeExtension> lerp(
-      covariant ThemeExtension<ColorThemeExtension>? other, double t) {
-    return ColorThemeExtension(
-        background: background,
-        buttonText: buttonText,
-        textFieldBg: textFieldBg,
-        textColor: textColor);
+  static ColorTheme darkThemeColor() {
+    return ColorTheme(
+        textFieldBg: AppColors.primaryBlack,
+        buttonShadow: AppColors.secondaryBlack,
+        text: AppColors.white);
   }
 }

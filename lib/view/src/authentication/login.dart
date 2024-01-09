@@ -1,7 +1,10 @@
+import 'package:amal/service/constant/app_finals.dart';
+import 'package:amal/service/cubit/theme_cubit.dart';
 import 'package:amal/view/widgets/buttons.dart';
 import 'package:amal/view/widgets/extensions.dart';
 import 'package:amal/view/widgets/textformfields.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({super.key});
@@ -32,5 +35,9 @@ class LoginPage extends StatelessWidget {
     );
   }
 
-  void submit() {}
+  void submit() {
+    final cubit = AppFinals.context.read<ThemeCubit>();
+    cubit.toggleTheme();
+    print(AppFinals.context.read<ThemeCubit>().state.colorTheme.textFieldBg);
+  }
 }

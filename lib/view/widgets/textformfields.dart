@@ -1,7 +1,10 @@
 import 'package:amal/service/constant/app_finals.dart';
 import 'package:amal/service/constant/colors.dart';
-import 'package:amal/service/theme/theme.dart';
+import 'package:amal/service/cubit/theme_cubit.dart';
+import 'package:amal/service/theme/color_theme.dart';
+import 'package:amal/service/utils/instance.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class CustomTextField extends StatelessWidget {
   const CustomTextField(
@@ -13,12 +16,13 @@ class CustomTextField extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final state = context.watch<ThemeCubit>().state;
     return TextFormField(
       controller: controller,
       onChanged: onChanged,
       decoration: InputDecoration(
           hintText: hint,
-          fillColor: AppFinals.colors.textFieldBg,
+          fillColor: state.colorTheme.textFieldBg,
           filled: true,
           border: InputBorder.none,
           // focusedBorder: OutlineInputBorder(

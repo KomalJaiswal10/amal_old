@@ -1,9 +1,9 @@
-import 'package:amal/service/theme/color_theme.dart';
-import 'package:get/get.dart';
+import 'package:amal/service/cubit/theme_cubit.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
-final class AppFinals {
-  static final ColorThemeExtension _colorTheme =
-      Get.context!.theme.extension<ColorThemeExtension>()!;
-
-  static ColorThemeExtension get colors => _colorTheme;
+abstract class AppFinals {
+  static final GlobalKey<NavigatorState> navState = GlobalKey<NavigatorState>();
+  static final BuildContext context = navState.currentContext!;
+  static final themeState = context.watch<ThemeCubit>().state;
 }

@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:intl/intl.dart';
 
 extension ExThemeData on BuildContext {
-  ThemeData get theme => Theme.of(this);
+  ThemeData get theme => Theme.of(Get.context!);
   TextTheme get textTheme => theme.textTheme;
 }
 

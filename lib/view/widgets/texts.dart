@@ -1,17 +1,25 @@
+import 'package:amal/service/constant/app_finals.dart';
+import 'package:amal/service/constant/colors.dart';
+import 'package:amal/view/widgets/extensions.dart';
 import 'package:flutter/material.dart';
 
 abstract class BaseTextTemplate {
- 
- Widget button();
-
+  Widget defaultStyle({required String title, required TextStyle style}) {
+    return DefaultTextStyle(style: style, child: Text(title));
+  }
 }
 
-class CustomText extends BaseTextTemplate{
-  
-  @override
-  Widget button() {
-    // TODO: implement button
-    throw UnimplementedError();
-  }
+class CustomText extends BaseTextTemplate {
+  final String title;
 
+  CustomText(this.title);
+
+  Widget buttonText() {
+    return defaultStyle(
+        title: title,
+        style: AppFinals.context
+            .textTheme
+            .titleMedium!
+            .copyWith(fontWeight: FontWeight.bold, color: AppColors.white));
+  }
 }
